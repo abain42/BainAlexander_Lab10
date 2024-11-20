@@ -35,6 +35,7 @@ test = ([3,2],[2,3])
 def spectral_radius(test):
     eigval, eigvec = np.linalg.eig(test)
     eigvalabs = map(abs,eigval)
-    return (list(eigvalabs))
+    eigvalabsmax = max(eigvalabs)
+    return (eigvalabsmax)
 
 print(spectral_radius(test))
