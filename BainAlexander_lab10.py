@@ -29,3 +29,10 @@ plt.title('a(x,0) vs. X')
 plt.show()
 
 
+#Part 3
+test = ([3,2],[2,3])
+print(test)
+eigval, eigvec = np.linalg.eig(test)
+print(eigval)
+#def spectral_radius(A):
+    #np.linalg.eig(a)
