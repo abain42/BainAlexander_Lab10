@@ -31,14 +31,10 @@ plt.show()
 
 #Part 3
 test = ([3,2],[2,3])
-eigval, eigvec = np.linalg.eig(test)
-eigvalabs = map(abs,eigval)
-print(eigval)
-print(list(eigvalabs))
-#def spectral_radius(test):
-    #eigval, eigvec = np.linalg.eig(test)
-   # eigvalabs = map(abs,eigval)
-  #  print(eigval)
- #   print(list(eigvalabs))
 
-#print(spectral_radius(A))
+def spectral_radius(test):
+    eigval, eigvec = np.linalg.eig(test)
+    eigvalabs = map(abs,eigval)
+    return (list(eigvalabs))
+
+print(spectral_radius(test))
