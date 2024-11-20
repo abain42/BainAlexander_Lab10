@@ -23,5 +23,9 @@ xi = np.linspace(L/2,L/2+5,N) -5
 Aofx0 = make_initialcond(sigma = 0.2,K=35,x=xi)
 
 plt.plot(xi,Aofx0)
+plt.xlabel('Values of X')
+plt.ylabel('a(x,0) values')
+plt.title('a(x,0) vs. X')
 plt.show()
-    
+
+
