@@ -12,12 +12,16 @@ print(A)
 
 ### Part 2 ###
 
+from matplotlib import pyplot as plt
 
 def make_initialcond(sigma,K,x):
     a = np.exp(-((x)**2)/(2*sigma**2))*np.cos(K,x)
     return a 
-L =5, N=500
-xi = np.linspace(-L/2,L/2,N)
+L =5
+N=500
+xi = np.linspace(L/2,L/2+5,N) -5
 Aofx0 = make_initialcond(sigma = 0.2,K=35,x=xi)
 
+plt.plot(Aofx0,xi)
+plt.show()
     
