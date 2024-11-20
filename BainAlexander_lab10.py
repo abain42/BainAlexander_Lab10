@@ -48,11 +48,16 @@ plt.show()
 
 #Part 3
 
-
+#this function finds the largest absolute value eigenvalue of a given array
+#it takes the argument A which is an array calculated earlier
 def spectral_radius(A):
+    #this finds the eigenvalues and eigenvectors using the numpy function .eig
     eigval, eigvec = np.linalg.eig(A)
+    #we then use the map function to map the eigenvalues found earlier to the absolute function
     eigvalabs = map(abs,eigval)
+    #we then use the max function to find the max value of the absolute values of the eigenvalues
     eigvalabsmax = max(eigvalabs)
+    #we then return that value
     return (eigvalabsmax)
-
+#this calls the function and prints it 
 print(spectral_radius(A))
